@@ -84,19 +84,20 @@ nav > ul > li:hover {
 }
 .footer-links ul {
   display: inline-block;
-  margin-left: 425px;
+  margin-left: 500px;
   text-decoration: none;
 }
 .footer-links ul li {
-  display: inline-block;
+  display: block;
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 .footer-links ul li:hover {
   background-color: skyblue;
 }
 .footer-contact {
   margin-top: 20px;
-  margin-left: 239px;
+  margin-left: 344px;
   display: inline-block;
   color: blue;
 }
