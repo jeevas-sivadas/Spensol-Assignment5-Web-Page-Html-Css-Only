@@ -9,12 +9,15 @@ body {
 }
 nav {
   background-color: white;
+  height: 20vh;
   position: sticky;
+  display: flex;
+  align-items: center;
   top: 0;
   z-index: 1000;
 }
 .logo {
-  display: inline-block;
+  margin-left: 20px;
 }
 ul {
   list-style: none;
@@ -77,6 +80,7 @@ nav > ul > li:hover {
 }
 .footer-logo {
   display: inline-block;
+  margin-left: 20px;
 }
 .footer-links {
   display: inline-block;
