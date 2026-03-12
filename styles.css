@@ -9,27 +9,39 @@ body {
 }
 nav {
   background-color: white;
-  height: 20vh;
   position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
-  top: 0;
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.logo {
+.logo img {
   margin-left: 20px;
+  width: 43px;
+  height: auto;
 }
-ul {
+.nav-links {
   list-style: none;
-  display: inline-block;
-  margin-left: 920px;
+  display: flex;
+  flex-direction: row;
 }
-nav > ul > li {
-  display: inline-block;
-  margin-right: 15px;
+.nav-links li {
+  margin-right: 20px;
 }
-nav > ul > li:hover {
-  background-color: skyblue;
+.nav-links li a {
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+}
+.nav-links li a:hover {
+  color: skyblue;
+}
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 .hero-Section {
   background-image: url("images/Hero-section.jpg");
@@ -54,14 +66,20 @@ nav > ul > li:hover {
   margin-top: 50px;
   color: blue;
 }
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
 .card {
   background-color: white;
   width: 300px;
   margin: 20px;
-  display: inline-block;
-  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-left: 100px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .card-title {
   color: blue;
@@ -78,34 +96,134 @@ nav > ul > li:hover {
 .card p {
   padding: 0 15px 15px;
 }
-.footer-logo {
-  display: inline-block;
-  margin-left: 20px;
+footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 }
-.footer-links {
-  display: inline-block;
-  margin-left: 0;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.footer-logo img {
+  margin-left: 20px;
+  width: 43px;
+  height: auto;
 }
 .footer-links ul {
-  display: inline-block;
-  margin-left: 500px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer-links li {
+  margin-right: 20px;
+}
+.footer-links li a {
   text-decoration: none;
+  color: blue;
+  font-size: 18px;
 }
-.footer-links ul li {
-  display: block;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-.footer-links ul li:hover {
-  background-color: skyblue;
+.footer-links li a:hover {
+  color: skyblue;
 }
 .footer-contact {
-  margin-top: 20px;
-  margin-left: 344px;
-  display: inline-block;
   color: blue;
+  font-size: 18px;
 }
 .footer-text {
   text-align: center;
-  color: blue;
+  border-top: 1px solid white;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: Right;
+    display: none;
+    width: 20%;
+    background: white;
+    position: Relative;
+  }
+
+  .nav-links.show {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hero-Section h1 {
+    font-size: 32px;
+    padding-top: 150px;
+  }
+
+  .hero-Section p {
+    font-size: 18px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 50px;
+    height: auto;
+    margin: 0;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin: 5px 0;
+  }
 }

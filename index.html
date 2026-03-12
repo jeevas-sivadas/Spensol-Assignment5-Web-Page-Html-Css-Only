@@ -13,20 +13,21 @@
   <body>
     <nav>
       <div class="logo"><img src="images\logo.png" alt="Logo" /></div>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
     <section class="hero-Section">
       <h1>Welcome to Nibhas Hrd Solutions</h1>
       <p>A complete companion for It problems</p>
     </section>
     <main>
-      <section>
-        <h2 class="services">Our Services</h2>
+      <h2 class="services">Our Services</h2>
+      <section class="card-container">
         <div class="card">
           <div>
             <h4 class="card-title">Web Development</h4>
@@ -125,24 +126,27 @@
       </section>
     </main>
     <footer>
-      <section class="footer-logo">
-        <img src="images\logo.png" alt="Logo" />
-      </section>
-      <section class="footer-links">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </section>
-      <section class="footer-contact">
-        <p>Contact India +91: 9876543210</p>
-        <p>Email: info@nibhashrdsolution.com</p>
-      </section>
+      <div class="footer-content">
+        <section class="footer-logo">
+          <img src="images\logo.png" alt="Logo" />
+        </section>
+        <section class="footer-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </section>
+        <section class="footer-contact">
+          <p>Contact India +91: 9876543210</p>
+          <p>Email: info@nibhashrdsolution.com</p>
+        </section>
+      </div>
       <p class="footer-text">
         &copy; 2026 Nibhas HRD Solution Pvt Ltd. All rights reserved.
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
